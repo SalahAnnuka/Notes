@@ -1,23 +1,41 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import Home from './Home/Home.js'
+
+function Window(){
+  return (
+    <div className="Window">
+      <h2 className='create'>Create Note</h2>
+      <textarea className="title"></textarea>
+      <div className="brow">
+        <button className="btn cancel">Cancel</button>
+        <Link className="btn confirm" to="/Note">Confirm</Link>
+      </div>
+    </div>
+  );
+}
+
+function Dim(){
+  return (
+    <div className="Dim"></div>
+  );
+}
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Dim/>
+      <Router>
+        <Routes>
+          <Route  exact path='/' element={<Home/>}/>
+          <Route  exact path='/Note' element={<Note/>}/>
+          <Route  exact path='/Edit' element={<Edit/>}/>
+        </Routes>
+    </Router>
+    <Window/>
     </div>
   );
 }
