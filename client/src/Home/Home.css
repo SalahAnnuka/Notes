@@ -1,0 +1,46 @@
+.Home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.Navbar{
+    width: 100%;
+    background-color: rgb(240, 201, 62);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 30px;
+}
+
+.navbar-title {
+    font-size: 50px;
+    font-weight: bolder;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-options {
+    font-size: 20px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navbar-option {
+    text-decoration: none;
+    color: #fff;
+
+  }
+  
+  .navbar-option:hover {
+    text-decoration: underline;
+  }
+
+  .List{
+    display: flex;
+    flex: 1;
+  }
