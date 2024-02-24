@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "title": "Meeting Agenda",
+      "body": "1. Discuss project timelines.\n2. Review budget allocations.\n3. Assign tasks for next week."
+    },
+    {
+      "id": "2",
+      "title": "Grocery List",
+      "body": "1. Milk\n2. Eggs\n3. Bread\n4. Apples\n5. Pasta\n6. Chicken\n7. Spinach"
+    },
+    {
+      "id": "3",
+      "title": "Ideas for Website Redesign",
+      "body": "1. Implement responsive design.\n2. Update color scheme.\n3. Improve navigation.\n4. Add testimonials section."
+    }
+  ]
