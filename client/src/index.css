@@ -31,3 +31,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.dim{
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  opacity: .6;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: none;
+}
