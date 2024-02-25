@@ -7,13 +7,10 @@ import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 function Navbar(){
     return (
         <div className='Navbar'>
-            <div className='window'>
-                <div className='option'>Cancel</div>
-            </div>
-            <div className="dim"></div>
             <div className="navbar-title">My Notes</div>
             <div className="navbar-options">
                 <a href="#" className="navbar-option">New</a>
+                <a href="#" className="navbar-option">Edit</a>
             </div>
         </div>
     );
