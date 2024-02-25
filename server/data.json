@@ -1,17 +1,52 @@
 [
-    {
-      "id": 1,
-      "title": "Meeting Agenda",
-      "body": "1. Discuss project timelines.\n2. Review budget allocations.\n3. Assign tasks for next week."
-    },
-    {
-      "id": "2",
-      "title": "Grocery List",
-      "body": "1. Milk\n2. Eggs\n3. Bread\n4. Apples\n5. Pasta\n6. Chicken\n7. Spinach"
-    },
-    {
-      "id": "3",
-      "title": "Ideas for Website Redesign",
-      "body": "1. Implement responsive design.\n2. Update color scheme.\n3. Improve navigation.\n4. Add testimonials section."
-    }
-  ]
+  {
+    "id": 1,
+    "title": "Meeting Agenda",
+    "body": "1. Discuss project timelines.\n2. Review budget allocations.\n3. Assign tasks for next week."
+  },
+  {
+    "id": 2,
+    "title": "Grocery List",
+    "body": "1. Milk\n2. Eggs\n3. Bread\n4. Apples\n5. Pasta\n6. Chicken\n7. Spinach"
+  },
+  {
+    "id": 3,
+    "title": "Ideas for Website Redesign",
+    "body": "1. Implement responsive design.\n2. Update color scheme.\n3. Improve navigation.\n4. Add testimonials section."
+  },
+  {
+    "id": 4,
+    "title": "Vacation Packing List",
+    "body": "1. Clothes\n2. Toothbrush\n3. Sunscreen\n4. Passport\n5. Camera\n6. Snacks\n7. Phone charger"
+  },
+  {
+    "id": 5,
+    "title": "Books to Read",
+    "body": "1. 'The Great Gatsby' by F. Scott Fitzgerald\n2. 'To Kill a Mockingbird' by Harper Lee\n3. '1984' by George Orwell\n4. 'The Catcher in the Rye' by J.D. Salinger"
+  },
+  {
+    "id": 6,
+    "title": "Home Improvement Projects",
+    "body": "1. Paint the living room walls\n2. Replace kitchen faucet\n3. Install new light fixtures\n4. Organize garage\n5. Plant flowers in the garden"
+  },
+  {
+    "id": 7,
+    "title": "Fitness Goals",
+    "body": "1. Run 5 miles three times a week\n2. Attend yoga classes twice a week\n3. Increase weightlifting reps by 10%\n4. Incorporate stretching routine daily"
+  },
+  {
+    "id": 8,
+    "title": "Financial Planning",
+    "body": "1. Create monthly budget\n2. Start saving for retirement\n3. Pay off credit card debt\n4. Invest in stocks and bonds\n5. Review insurance policies"
+  },
+  {
+    "id": 9,
+    "title": "Recipe Ideas",
+    "body": "1. Chicken Alfredo\n2. Vegetable Stir-Fry\n3. Beef Tacos\n4. Pasta Primavera\n5. Shrimp Scampi"
+  },
+  {
+    "id": 10,
+    "title": "Bucket List",
+    "body": "1. Skydiving\n2. Travel to Japan\n3. Learn to play the guitar\n4. Volunteer at a local shelter\n5. Write a novel"
+  }
+]

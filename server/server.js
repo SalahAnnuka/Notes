@@ -1,32 +1,37 @@
-const http = require('http');
+const cors = require('cors');
 const fs = require('fs');
+const express = require('express');
+var app = express();
 
-const server = http.createServer((req, res) => {
-    // Check if the request is for the '/api/notes' endpoint
-    if (req.url === '/api/notes' && req.method === 'GET') {
-        // Read the JSON data from a file (assuming data.json is in the same directory)
-        fs.readFile('data.json', (err, data) => {
-            if (err) {
-                res.statusCode = 500;
-                res.setHeader('Content-Type', 'application/json');
-                res.end(JSON.stringify({ error: 'Internal Server Error' }));
-                return;
-            }
 
-            // Parse the JSON data and send it as the response
-            res.statusCode = 200;
-            res.setHeader('Content-Type', 'application/json');
-            res.end(data);
-        });
-    } else {
-        // If the requested endpoint is not found, return a 404 Not Found response
-        res.statusCode = 404;
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({ error: 'Not Found' }));
-    }
+
+// Enable CORS with specific options
+app.use(cors());
+
+
+app.get('/Notes', function(req, res) {
+    // Read the JSON file
+    fs.readFile('./data.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            res.status(500).json({ error: 'Error reading file' });
+            return;
+        }
+        
+        // Parse the JSON data
+        try {
+            const notesData = JSON.parse(data);
+            // Return the notes data as JSON
+            res.json(notesData);
+        } catch (parseError) {
+            console.error('Error parsing JSON:', parseError);
+            res.status(500).json({ error: 'Error parsing JSON' });
+        }
+    });
 });
 
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+var server = app.listen(7777,function(){
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log('Server listening on port', port);
 });
