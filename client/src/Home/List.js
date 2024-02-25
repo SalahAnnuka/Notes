@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
+import {BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 function List() {
   const [notes, setNotes] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Add a state for loading status
@@ -26,9 +27,14 @@ function List() {
       // Handle errors appropriately, e.g., display an error message
     }
   };
-   const setID = (id)=>{
-      
-   }
+
+  
+  const HandleClick = (ftitle,fbody) => {
+    var data = {title: ftitle, body: fbody}
+    useNavigate().push('/Note',{data});
+    console.log(data);
+  }
+
   // Render based on loading and emptiness states
   if (isLoading) {
     return <div className='List'>Loading...</div>;
@@ -38,9 +44,9 @@ function List() {
     return (
       <div className='List'>
         {notes.map((note) => (
-          <div className='icon' key={note.id}>
+          <Link to={{ pathname: '/Note' }} className='icon' onClick={()=>HandleClick(note.title,note.body)}>
             <div className='title'>{note.title}</div>
-          </div>
+          </Link>
         ))}
       </div>
     );

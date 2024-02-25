@@ -5,7 +5,10 @@
   box-sizing: border-box;
 }
 
-
+*:link , *:visited{
+  text-decoration: none;
+  color:black;
+}
 
 html, body {
   width: 100vw;
